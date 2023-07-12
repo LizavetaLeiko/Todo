@@ -1,8 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
-import  todoReduser  from "../redusers/todoSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import { todoReduser } from '../';
 
 export const store = () => {
-  return configureStore({
-    reducer: todoReduser,
-  });
+	return configureStore({
+		reducer: todoReduser,
+	});
 };

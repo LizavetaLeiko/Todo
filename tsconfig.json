@@ -18,9 +18,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["components/index"],
+      "@store": ["store/index"],
+      "@interfaces": ["interfaces/index"],
+      "@theme": ["theme/index"],
+    }
   },
   "include": [
-    "src"
+    "src", "src/**/*", "src/**/**/*", "src/**/**/**/*", "webpack.config.js"
   ]
 }
