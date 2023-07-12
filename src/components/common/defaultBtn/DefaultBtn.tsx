@@ -9,6 +9,7 @@ const DefaultBtn = (props: IDefaultBtnProps) => {
       variant="outline"
       fontWeight={"500"}
       color={theme.colors.white}
+      fontSize={{ base: '14px', sm: '16px' }}
       _hover={{
         color: `${theme.colors.purple}`,
         backgroundColor: `${theme.colors.white}`

@@ -12,6 +12,10 @@ const theme = extendTheme({
     green: '#55EB7F',
     white: '#ffffff',
     black: '#000000',
+  },
+  breakpoints: {
+    sm: '550px',
+    md: '850px',
   }
 });
 

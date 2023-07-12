@@ -2,6 +2,7 @@ import {
   Checkbox,
   Flex,
   Input,
+  Text,
 } from "@chakra-ui/react";
 import {
   CheckIcon,
@@ -19,7 +20,6 @@ import {
 import { useState } from "react";
 
 const Todo = (props: IToDo) => {
-  
   const [isEditable, setIsEditable] =
     useState<boolean>(false);
   const [newValue, setNewValue] =
@@ -53,6 +53,7 @@ const Todo = (props: IToDo) => {
       border={`1px solid ${theme.colors.purple}`}
       padding={"5px 10px"}
       width={"100%"}
+      gap={2}
     >
       {isEditable ? (
         <Input
@@ -60,14 +61,28 @@ const Todo = (props: IToDo) => {
           variant={"flusheds"}
           width={"100%"}
           value={newValue}
+          fontSize={{
+            base: "14px",
+            md: "18px",
+            sm: "16px",
+          }}
         />
       ) : (
         <Checkbox
+          spacing={3}
           size="lg"
           iconColor={theme.colors.green}
           colorScheme={theme.colors.white}
         >
-          {props.task}
+          <Text
+            fontSize={{
+              base: "14px",
+              md: "18px",
+              sm: "16px",
+            }}
+          >
+            {props.task}
+          </Text>
         </Checkbox>
       )}
       <Flex
