@@ -30,7 +30,7 @@ const CreateTodoForm = () =>{
 
   return(
     <Flex
-      width={'50%'}
+      width={'100%'}
       padding={"20px"}
       border={`1px solid ${theme.colors.purple}`}
       bg={theme.colors.purple}

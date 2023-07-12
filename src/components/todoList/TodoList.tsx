@@ -13,10 +13,11 @@ const TodoList = () => {
       justify={"center"}
       align={"center"}
       direction={"column"}
-      width={"50%"}
+      width={"100%"}
       padding={"20px"}
       border={`1px solid ${theme.colors.purple}`}
       borderRadius={"10px"}
+      bg={theme.colors.white}
       gap={2}
     >
       {todos.map((item: IToDo) => {

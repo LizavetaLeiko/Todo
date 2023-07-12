@@ -4,7 +4,7 @@ import {
 } from "@reduxjs/toolkit";
 import { IToDo } from "../../interfaces/ITodo";
 
-const initialState: IToDo[] = [{todo: 'dhb', id: 'shb'}];
+const initialState: IToDo[] = [];
 
 const todoSlice = createSlice({
   name: "todo",

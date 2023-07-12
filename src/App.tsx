@@ -1,20 +1,15 @@
 import { Flex } from "@chakra-ui/react";
-import TodoList from "./components/todoList/TodoList";
-import CreateTodoForm from "./components/createTodoForm/CreateTodoForm";
 import theme from "./theme";
+import ContentContainer from "./components/contentContainer/ContentContainer";
 
 function App() {
   return (
     <div className="App">
       <Flex
         justify={"center"}
-        align={"center"}
-        direction={"column"}
-        gap={2}
         fontFamily={theme.fonts.body}
       >
-        <CreateTodoForm/>
-        <TodoList/>
+        <ContentContainer/>
       </Flex>
     </div>
   );
