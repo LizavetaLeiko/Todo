@@ -1,7 +1,8 @@
-import { Flex, theme } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Todo from "../todo/Todo";
 import { IToDo } from "../../interfaces/ITodo";
 import { useAppSelector } from "../../store/reduxHook";
+import theme from "../../theme";
 
 const TodoList = () => {
 
@@ -16,6 +17,7 @@ const TodoList = () => {
       padding={"20px"}
       border={`1px solid ${theme.colors.purple}`}
       borderRadius={"10px"}
+      gap={2}
     >
       {todos.map((item: IToDo) => {
         return (
