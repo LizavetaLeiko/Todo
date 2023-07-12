@@ -20,7 +20,7 @@ const CreateTodoForm = () =>{
   const handleAddTask = () =>{
     if(task) {
       const todo = {
-        todo: task,
+        task: task,
         id: uuidv4(),
       }
       dispatch(addTodo(todo))

@@ -1,4 +1,4 @@
 export interface IToDo {
-  todo: string;
+  task: string;
   id: string;
 }

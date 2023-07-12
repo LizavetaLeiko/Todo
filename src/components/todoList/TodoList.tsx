@@ -22,7 +22,7 @@ const TodoList = () => {
     >
       {todos.map((item: IToDo) => {
         return (
-          <Todo key={item.id} todo={item.todo} id={item.id} />
+          <Todo key={item.id} task={item.task} id={item.id} />
         );
       })}
     </Flex>

@@ -4,12 +4,12 @@ import {
   Flex,
   IconButton,
 } from "@chakra-ui/react";
-import { IToDo } from "../../interfaces/ITodo";
 import {
   DeleteIcon,
   EditIcon,
 } from "@chakra-ui/icons";
 import theme from "../../theme";
+import { IToDo } from "../../interfaces/ITodo";
 
 const Todo = (props: IToDo) => {
   return (
@@ -25,7 +25,7 @@ const Todo = (props: IToDo) => {
         iconColor={theme.colors.green}
         colorScheme={theme.colors.white}
       >
-        {props.todo}
+        {props.task}
       </Checkbox>
       <Box>
         <IconButton
