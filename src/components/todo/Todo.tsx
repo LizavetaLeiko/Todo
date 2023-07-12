@@ -16,6 +16,7 @@ import { useAppDispatch } from "../../store/reduxHook";
 import {
   deleteTodo,
   editTodo,
+  toggleCheckboxTodo,
 } from "../../store/redusers/todoSlice";
 import { useState } from "react";
 
@@ -34,6 +35,7 @@ const Todo = (props: IToDo) => {
   const handleEditTask = () => {
     const newTodo = {
       task: newValue,
+      isDone: props.isDone,
       id: props.id,
     };
     dispatch(editTodo(newTodo));
@@ -44,6 +46,10 @@ const Todo = (props: IToDo) => {
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setNewValue(event.target.value);
+  };
+
+  const handleToggleIsDone = (id: string) => {
+    dispatch(toggleCheckboxTodo(id))
   };
 
   return (
@@ -73,6 +79,8 @@ const Todo = (props: IToDo) => {
           size="lg"
           iconColor={theme.colors.green}
           colorScheme={theme.colors.white}
+          isChecked={props.isDone}
+          onChange={() => handleToggleIsDone(props.id)}
         >
           <Text
             fontSize={{

@@ -6,7 +6,7 @@ import theme from "../../theme";
 
 const TodoList = () => {
 
-  const todos: IToDo[] = useAppSelector((state) => state);
+  const todos: IToDo[] = useAppSelector((state) =>[...state].reverse());
 
   return (
     <Flex
@@ -22,7 +22,7 @@ const TodoList = () => {
     >
       {todos.map((item: IToDo) => {
         return (
-          <Todo key={item.id} task={item.task} id={item.id} />
+          <Todo key={item.id} task={item.task} id={item.id} isDone={item.isDone}/>
         );
       })}
     </Flex>

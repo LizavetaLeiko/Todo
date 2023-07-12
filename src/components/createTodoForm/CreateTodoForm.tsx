@@ -21,6 +21,7 @@ const CreateTodoForm = () => {
     if (task) {
       const todo = {
         task: task,
+        isDone: false,
         id: uuidv4(),
       };
       dispatch(addTodo(todo));
