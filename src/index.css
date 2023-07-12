@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.chakra-checkbox__control{
+  border: 1px solid #FA4B75 !important
+}
+.chakra-checkbox__control[data-checked]{
+  border: 1px solid #55EB7F !important
+}
