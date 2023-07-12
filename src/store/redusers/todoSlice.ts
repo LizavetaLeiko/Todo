@@ -29,11 +29,10 @@ const todoSlice = createSlice({
       state,
       action: PayloadAction<IToDo>
     ) => {
-      state.map((item: IToDo) =>
-        item.id !== action.payload.id
-          ? action.payload
-          : item
-      );
+      const index = state.findIndex(item => item.id === action.payload.id);
+      if (index !== -1) {
+        state[index] = action.payload;
+      }
     },
   },
 });
